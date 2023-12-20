@@ -1,0 +1,46 @@
+{
+  "name": "sandbox-debugger",
+  "description": "sandbox debugger client for node",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jameskyburz/sandbox-debugger.git"
+  },
+  "author": {
+    "name": "james kyburz",
+    "email": "james.kyburz@gmail.com"
+  },
+  "version": "0.2.44",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "missing": "npx dependency-sync@latest",
+    "build": "npx @vercel/ncc build -m src/index.js",
+    "prepublishOnly": "npm run build",
+    "postpublish": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.34.0",
+    "ws": "8.8.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "inspect",
+    "debug",
+    "sandbox",
+    "docker",
+    "lambda",
+    "travis",
+    "github-actions",
+    "remote-debugging",
+    "reverse-proxy",
+    "client",
+    "runkit",
+    "bitbucket-pipelines",
+    "gitlab-ci/cd",
+    "aws-codebuid",
+    "heroku"
+  ],
+  "license": "Apache-2.0"
+}

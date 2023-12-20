@@ -1,0 +1,16 @@
+{
+  "name": "test-sandbox-debugger",
+  "scripts": {
+    "pretest": "npm --prefix ../packages/client install && npm --prefix ../packages/client run build && npm i",
+    "test": "node src/same-process.js && node src/another-process.js",
+    "posttest": "rm -rf ../packages/client/dist"
+  },
+  "devDependencies": {
+    "node-fetch": "2.6.7",
+    "sandbox-debugger": "file://../packages/client",
+    "sandbox-debugger-server": "file://../packages/server",
+    "tap": "16.2.0",
+    "ws": "8.8.0"
+  },
+  "private": true
+}
